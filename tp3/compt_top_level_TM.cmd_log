@@ -1,0 +1,5 @@
+sch2sym -intstyle ise -family artix7 -refsym compt_top_level_TM C:/TP_FPGA/tp/tp3/compt_top_level_TM.sch C:/TP_FPGA/tp/tp3/compt_top_level_TM.sym 
+sch2hdl -intstyle ise -family artix7 -flat -suppress -vhdl compt_top_level_TM_drc.vhf -w C:/TP_FPGA/tp/tp3/compt_top_level_TM.sch 
+xst -intstyle ise -ifn "C:/TP_FPGA/tp/tp3/compt_top_level_TM.xst" -ofn "C:/TP_FPGA/tp/tp3/compt_top_level_TM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf.ucf -p xc7a100t-csg324-3 compt_top_level_TM.ngc compt_top_level_TM.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o compt_top_level_TM_map.ncd compt_top_level_TM.ngd compt_top_level_TM.pcf 

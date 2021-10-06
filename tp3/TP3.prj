@@ -1,0 +1,3 @@
+vhdl work "compt_mod6.vhf"
+vhdl work "../../docs/hex2led.vhd"
+vhdl work "TP3.vhf"

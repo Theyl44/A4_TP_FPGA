@@ -1,0 +1,4 @@
+sch2sym -intstyle ise -family artix7 -refsym TP3 C:/TP_FPGA/tp/tp3/TP3.sch C:/TP_FPGA/tp/tp3/TP3.sym 
+xst -intstyle ise -ifn "C:/TP_FPGA/tp/tp3/TP3.xst" -ofn "C:/TP_FPGA/tp/tp3/TP3.syr" 
+xst -intstyle ise -ifn "C:/TP_FPGA/tp/tp3/TP3.xst" -ofn "C:/TP_FPGA/tp/tp3/TP3.syr" 
+xst -intstyle ise -ifn "C:/TP_FPGA/tp/tp3/TP3.xst" -ofn "C:/TP_FPGA/tp/tp3/TP3.syr" 

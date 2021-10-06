@@ -1,0 +1,2 @@
+sch2hdl,-intstyle,ise,-family,artix7,-flat,-suppress,-vhdl,C:/TP_FPGA/tp/tp2/ADD_FA_1bit.vhf,-w,C:/TP_FPGA/tp/tp2/ADD_FA_1bit.sch
+sch2hdl,-intstyle,ise,-family,artix7,-flat,-suppress,-vhdl,C:/TP_FPGA/tp/tp2/ADD_FA_4bits.vhf,-w,C:/TP_FPGA/tp/tp2/ADD_FA_4bits.sch

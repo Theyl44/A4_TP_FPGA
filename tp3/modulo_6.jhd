@@ -1,0 +1,3 @@
+MODULE modulo_6
+	SUBMODULE compt_mod6
+		INSTANCE XLXI_1

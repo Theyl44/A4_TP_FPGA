@@ -1,0 +1,25 @@
+Running: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/TP_FPGA/tp/tp3/compt_mod6_isim_beh.exe -prj C:/TP_FPGA/tp/tp3/compt_mod6_beh.prj work.compt_mod6 
+ISim P.49d (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/TP_FPGA/tp/tp3/compt_mod6.vhf" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture fdce_v of entity FDCE [\FDCE('0')\]
+Compiling architecture and2_v of entity AND2 [and2_default]
+Compiling architecture or2_v of entity OR2 [or2_default]
+Compiling architecture xor2_v of entity XOR2 [xor2_default]
+Compiling architecture inv_v of entity INV [inv_default]
+Compiling architecture behavioral of entity compt_mod6
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: Le chemin d accès spécifié est introuvable, "isim\compt_mod6_isim_beh.exe.sim\libPortability.dll".
+Compiled 15 VHDL Units
+Built simulation executable C:/TP_FPGA/tp/tp3/compt_mod6_isim_beh.exe
+Fuse Memory Usage: 53440 KB
+Fuse CPU Usage: 1125 ms

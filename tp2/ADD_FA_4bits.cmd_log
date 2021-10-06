@@ -1,0 +1,21 @@
+xst -intstyle ise -ifn "C:/TP_FPGA/tp/tp2/ADD_FA_4bits.xst" -ofn "C:/TP_FPGA/tp/tp2/ADD_FA_4bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 ADD_FA_4bits.ngc ADD_FA_4bits.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ADD_FA_4bits_map.ncd ADD_FA_4bits.ngd ADD_FA_4bits.pcf 
+par -w -intstyle ise -ol high -mt off ADD_FA_4bits_map.ncd ADD_FA_4bits.ncd ADD_FA_4bits.pcf 
+xst -intstyle ise -ifn "C:/TP_FPGA/tp/tp2/ADD_FA_4bits.xst" -ofn "C:/TP_FPGA/tp/tp2/ADD_FA_4bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf.ucf -p xc7a100t-csg324-3 ADD_FA_4bits.ngc ADD_FA_4bits.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ADD_FA_4bits_map.ncd ADD_FA_4bits.ngd ADD_FA_4bits.pcf 
+par -w -intstyle ise -ol high -mt off ADD_FA_4bits_map.ncd ADD_FA_4bits.ncd ADD_FA_4bits.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ADD_FA_4bits.twx ADD_FA_4bits.ncd -o ADD_FA_4bits.twr ADD_FA_4bits.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f ADD_FA_4bits.ut ADD_FA_4bits.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf.ucf -p xc7a100t-csg324-3 ADD_FA_4bits.ngc ADD_FA_4bits.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ADD_FA_4bits_map.ncd ADD_FA_4bits.ngd ADD_FA_4bits.pcf 
+par -w -intstyle ise -ol high -mt off ADD_FA_4bits_map.ncd ADD_FA_4bits.ncd ADD_FA_4bits.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ADD_FA_4bits.twx ADD_FA_4bits.ncd -o ADD_FA_4bits.twr ADD_FA_4bits.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f ADD_FA_4bits.ut ADD_FA_4bits.ncd 
+xst -intstyle ise -ifn "C:/TP_FPGA/tp/tp2/ADD_FA_4bits.xst" -ofn "C:/TP_FPGA/tp/tp2/ADD_FA_4bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf.ucf -p xc7a100t-csg324-3 ADD_FA_4bits.ngc ADD_FA_4bits.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ADD_FA_4bits_map.ncd ADD_FA_4bits.ngd ADD_FA_4bits.pcf 
+par -w -intstyle ise -ol high -mt off ADD_FA_4bits_map.ncd ADD_FA_4bits.ncd ADD_FA_4bits.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ADD_FA_4bits.twx ADD_FA_4bits.ncd -o ADD_FA_4bits.twr ADD_FA_4bits.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f ADD_FA_4bits.ut ADD_FA_4bits.ncd 

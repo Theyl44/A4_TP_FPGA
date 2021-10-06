@@ -1,0 +1,5 @@
+[Inputs]
+=HEX[2:0]=
+[Outputs]
+=LED[6:0]=
+[BiDir]

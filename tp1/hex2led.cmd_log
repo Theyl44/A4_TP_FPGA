@@ -1,0 +1,2 @@
+vhdtdtfi -lib work ../../docs/hex2led.vhd -prj tp1 -o hex2led.spl -module hex2led -template C:/Xilinx/14.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 hex2led.spl C:/TP_FPGA/tp/tp1/hex2led.sym 

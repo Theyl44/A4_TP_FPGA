@@ -1,0 +1,5 @@
+MODULE compt_top_level_TM
+	SUBMODULE compt_TM
+		INSTANCE XLXI_1
+	SUBMODULE hex2led
+		INSTANCE XLXI_2

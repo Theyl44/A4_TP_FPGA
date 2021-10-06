@@ -1,0 +1,2 @@
+sch2hdl,-intstyle,ise,-family,artix7,-flat,-suppress,-vhdl,C:/TP_FPGA/tp/tp1/exo1.vhf,-w,C:/TP_FPGA/tp/tp1/exo1.sch
+sch2hdl,-intstyle,ise,-family,artix7,-flat,-suppress,-vhdl,C:/TP_FPGA/tp/tp1/segments.vhf,-w,C:/TP_FPGA/tp/tp1/segments.sch

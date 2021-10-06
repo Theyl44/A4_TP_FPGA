@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/TP_FPGA/tp/tp1/segments.xst" -ofn "C:/TP_FPGA/tp/tp1/segments.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf.ucf -p xc7a100t-csg324-3 segments.ngc segments.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o segments_map.ncd segments.ngd segments.pcf 
+par -w -intstyle ise -ol high -mt off segments_map.ncd segments.ncd segments.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml segments.twx segments.ncd -o segments.twr segments.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f segments.ut segments.ncd 

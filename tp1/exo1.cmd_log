@@ -1,0 +1,15 @@
+sch2sym -intstyle ise -family artix7 -refsym exo1 C:/TP_FPGA/tp/tp1/exo1.sch C:/TP_FPGA/tp/tp1/exo1.sym 
+sch2hdl -intstyle ise -family artix7 -flat -suppress -vhdl exo1_drc.vhf -w C:/TP_FPGA/tp/tp1/exo1.sch 
+xst -intstyle ise -ifn "C:/TP_FPGA/tp/tp1/exo1.xst" -ofn "C:/TP_FPGA/tp/tp1/exo1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf.ucf -p xc7a100t-csg324-3 exo1.ngc exo1.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o exo1_map.ncd exo1.ngd exo1.pcf 
+par -w -intstyle ise -ol high -mt off exo1_map.ncd exo1.ncd exo1.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exo1.twx exo1.ncd -o exo1.twr exo1.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f exo1.ut exo1.ncd 
+xst -intstyle ise -ifn "C:/TP_FPGA/tp/tp1/exo1.xst" -ofn "C:/TP_FPGA/tp/tp1/exo1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ucf.ucf -p xc7a100t-csg324-3 exo1.ngc exo1.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o exo1_map.ncd exo1.ngd exo1.pcf 
+par -w -intstyle ise -ol high -mt off exo1_map.ncd exo1.ncd exo1.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exo1.twx exo1.ncd -o exo1.twr exo1.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f exo1.ut exo1.ncd 
+sch2sym -intstyle ise -family artix7 -refsym exo1 C:/TP_FPGA/tp/tp1/exo1.sch C:/TP_FPGA/tp/tp1/exo1.sym 

@@ -1,0 +1,8 @@
+Release 14.4 Drc P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Wed Sep 29 10:10:20 2021
+
+drc -z ADD_FA_4bits.ncd ADD_FA_4bits.pcf
+
+DRC detected 0 errors and 0 warnings.

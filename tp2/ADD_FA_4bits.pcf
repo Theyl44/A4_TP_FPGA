@@ -1,0 +1,21 @@
+//! **************************************************************************
+// Written by: Map P.49d on Wed Sep 29 10:09:14 2021
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "R0" LOCATE = SITE "P4" LEVEL 1;
+COMP "S0" LOCATE = SITE "T8" LEVEL 1;
+COMP "S1" LOCATE = SITE "V9" LEVEL 1;
+COMP "S2" LOCATE = SITE "R8" LEVEL 1;
+COMP "S3" LOCATE = SITE "T6" LEVEL 1;
+COMP "S4" LOCATE = SITE "T5" LEVEL 1;
+COMP "A0" LOCATE = SITE "U9" LEVEL 1;
+COMP "A1" LOCATE = SITE "U8" LEVEL 1;
+COMP "B0" LOCATE = SITE "R5" LEVEL 1;
+COMP "A2" LOCATE = SITE "R7" LEVEL 1;
+COMP "B1" LOCATE = SITE "V7" LEVEL 1;
+COMP "A3" LOCATE = SITE "R6" LEVEL 1;
+COMP "B2" LOCATE = SITE "V6" LEVEL 1;
+COMP "B3" LOCATE = SITE "V5" LEVEL 1;
+SCHEMATIC END;
+

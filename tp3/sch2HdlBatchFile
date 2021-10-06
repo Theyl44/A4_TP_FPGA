@@ -1,0 +1,2 @@
+sch2hdl,-intstyle,ise,-family,artix7,-flat,-suppress,-vhdl,C:/TP_FPGA/tp/tp3/compt_TM.vhf,-w,C:/TP_FPGA/tp/tp3/compt_TM.sch
+sch2hdl,-intstyle,ise,-family,artix7,-flat,-suppress,-vhdl,C:/TP_FPGA/tp/tp3/compt_top_level_TM.vhf,-w,C:/TP_FPGA/tp/tp3/compt_top_level_TM.sch

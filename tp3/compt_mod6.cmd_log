@@ -1,0 +1,1 @@
+sch2hdl -intstyle ise -family artix7 -flat -suppress -vhdl compt_mod6_drc.vhf -w C:/TP_FPGA/tp/tp3/compt_mod6.sch 

@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family artix7 -refsym compt_TM C:/TP_FPGA/tp/tp3/compt_TM.sch C:/TP_FPGA/tp/tp3/compt_TM.sym 

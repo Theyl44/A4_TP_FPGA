@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/TP_FPGA/tp/tp1/exo1_exo1_sch_tb_isim_beh.exe" -prj "C:/TP_FPGA/tp/tp1/exo1_exo1_sch_tb_beh.prj" "work.exo1_exo1_sch_tb" 

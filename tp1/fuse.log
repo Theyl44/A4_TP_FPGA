@@ -1,0 +1,23 @@
+Running: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/TP_FPGA/tp/tp1/exo1_exo1_sch_tb_isim_beh.exe -prj C:/TP_FPGA/tp/tp1/exo1_exo1_sch_tb_beh.prj work.exo1_exo1_sch_tb 
+ISim P.49d (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/TP_FPGA/tp/tp1/exo1.vhf" into library work
+Parsing VHDL file "C:/TP_FPGA/tp/tp1/test_bench.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture and4b1_v of entity AND4B1 [and4b1_default]
+Compiling architecture behavioral of entity exo1 [exo1_default]
+Compiling architecture behavioral of entity exo1_exo1_sch_tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: Le chemin d accès spécifié est introuvable, "isim\exo1_exo1_sch_tb_isim_beh.exe.sim\libPortability.dll".
+Compiled 9 VHDL Units
+Built simulation executable C:/TP_FPGA/tp/tp1/exo1_exo1_sch_tb_isim_beh.exe
+Fuse Memory Usage: 52700 KB
+Fuse CPU Usage: 734 ms

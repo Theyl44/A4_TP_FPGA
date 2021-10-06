@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/TP_FPGA/tp/tp3/compt_mod6_isim_beh.exe" -prj "C:/TP_FPGA/tp/tp3/compt_mod6_beh.prj" "work.compt_mod6" 

@@ -1,0 +1,403 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.46 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.47 secs
+ 
+--> Reading design: compt_top_level_TM.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "compt_top_level_TM.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "compt_top_level_TM"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : compt_top_level_TM
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\TP_FPGA\tp\tp3\compt_TM.vhf" into library work
+Parsing entity <compt_TM>.
+Parsing architecture <BEHAVIORAL> of entity <compt_tm>.
+Parsing VHDL file "C:\TP_FPGA\docs\hex2led.vhd" into library work
+Parsing entity <hex2led>.
+Parsing architecture <Behavioral> of entity <hex2led>.
+Parsing VHDL file "C:\TP_FPGA\tp\tp3\compt_top_level_TM.vhf" into library work
+Parsing entity <compt_TM_MUSER_compt_top_level_TM>.
+Parsing architecture <BEHAVIORAL> of entity <compt_tm_muser_compt_top_level_tm>.
+Parsing entity <compt_top_level_TM>.
+Parsing architecture <BEHAVIORAL> of entity <compt_top_level_tm>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <compt_top_level_TM> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <compt_TM_MUSER_compt_top_level_TM> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <hex2led> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <compt_top_level_TM>.
+    Related source file is "C:\TP_FPGA\tp\tp3\compt_top_level_TM.vhf".
+    Summary:
+	no macro.
+Unit <compt_top_level_TM> synthesized.
+
+Synthesizing Unit <compt_TM_MUSER_compt_top_level_TM>.
+    Related source file is "C:\TP_FPGA\tp\tp3\compt_top_level_TM.vhf".
+    Summary:
+	no macro.
+Unit <compt_TM_MUSER_compt_top_level_TM> synthesized.
+
+Synthesizing Unit <hex2led>.
+    Related source file is "C:\TP_FPGA\docs\hex2led.vhd".
+    Found 8x7-bit Read Only RAM for signal <LED>
+    Summary:
+	inferred   1 RAM(s).
+Unit <hex2led> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x7-bit single-port Read Only RAM                     : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <hex2led>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_LED> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 7-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <HEX>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <LED>           |          |
+    -----------------------------------------------------------------------
+Unit <hex2led> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x7-bit single-port distributed Read Only RAM         : 1
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <compt_TM_MUSER_compt_top_level_TM> ...
+
+Optimizing unit <compt_top_level_TM> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block compt_top_level_TM, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : compt_top_level_TM.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 15
+#      AND2                        : 3
+#      INV                         : 3
+#      LUT3                        : 7
+#      OR2                         : 1
+#      XOR2                        : 1
+# FlipFlops/Latches                : 3
+#      FDCE                        : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 2
+#      OBUF                        : 7
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               3  out of  126800     0%  
+ Number of Slice LUTs:                   10  out of  63400     0%  
+    Number used as Logic:                10  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     12
+   Number with an unused Flip Flop:       9  out of     12    75%  
+   Number with an unused LUT:             2  out of     12    16%  
+   Number of fully used LUT-FF pairs:     1  out of     12     8%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    210     4%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+H                                  | BUFGP                  | 3     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.065ns (Maximum Frequency: 326.222MHz)
+   Minimum input arrival time before clock: 0.639ns
+   Maximum output required time after clock: 1.295ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'H'
+  Clock period: 3.065ns (frequency: 326.222MHz)
+  Total number of paths / destination ports: 8 / 3
+-------------------------------------------------------------------------
+Delay:               3.065ns (Levels of Logic = 3)
+  Source:            XLXI_1/XLXI_1 (FF)
+  Destination:       XLXI_1/XLXI_3 (FF)
+  Source Clock:      H rising
+  Destination Clock: H rising
+
+  Data Path: XLXI_1/XLXI_1 to XLXI_1/XLXI_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            11   0.361   0.326  XLXI_1/XLXI_1 (XLXN_1<0>)
+     INV:I->O              1   0.511   0.683  XLXI_1/XLXI_9 (XLXI_1/XLXN_109)
+     AND2:I1->O            1   0.107   0.693  XLXI_1/XLXI_6 (XLXI_1/XLXN_104)
+     OR2:I0->O             1   0.097   0.279  XLXI_1/XLXI_5 (XLXI_1/XLXN_103)
+     FDCE:D                    0.008          XLXI_1/XLXI_3
+    ----------------------------------------
+    Total                      3.065ns (1.084ns logic, 1.981ns route)
+                                       (35.4% logic, 64.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'H'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              0.639ns (Levels of Logic = 1)
+  Source:            RAZ (PAD)
+  Destination:       XLXI_1/XLXI_3 (FF)
+  Destination Clock: H rising
+
+  Data Path: RAZ to XLXI_1/XLXI_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.001   0.289  RAZ_IBUF (RAZ_IBUF)
+     FDCE:CLR                  0.349          XLXI_1/XLXI_1
+    ----------------------------------------
+    Total                      0.639ns (0.350ns logic, 0.289ns route)
+                                       (54.8% logic, 45.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'H'
+  Total number of paths / destination ports: 21 / 7
+-------------------------------------------------------------------------
+Offset:              1.295ns (Levels of Logic = 2)
+  Source:            XLXI_1/XLXI_1 (FF)
+  Destination:       LED<5> (PAD)
+  Source Clock:      H rising
+
+  Data Path: XLXI_1/XLXI_1 to LED<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            11   0.361   0.558  XLXI_1/XLXI_1 (XLXN_1<0>)
+     LUT3:I0->O            1   0.097   0.279  XLXI_2/Mram_LED21 (LED_2_OBUF)
+     OBUF:I->O                 0.000          LED_2_OBUF (LED<2>)
+    ----------------------------------------
+    Total                      1.295ns (0.458ns logic, 0.837ns route)
+                                       (35.4% logic, 64.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock H
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+H              |    3.065|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 21.97 secs
+ 
+--> 
+
+Total memory usage is 4674412 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
